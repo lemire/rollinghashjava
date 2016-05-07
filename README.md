@@ -13,7 +13,7 @@ This is a set of Java classes implementing various recursive n-gram hashing tech
 
 ## Code sample
 
-```
+```java
 String s = "some string";
 int n = 3; //hash all sequences of 3 characters
 CyclicHash ch = new CyclicHash(n);
@@ -21,7 +21,7 @@ int k = 0;
 for(; k<n;++k) {
   ch.eat(s.charAt(k));
 }
-int rollinghash = ch.eat(s.charAt(k)); // the first or last 32-(n-1) bits are 
+int rollinghash = ch.eat(s.charAt(k)); // the first or last 32-(n-1) bits are strongly universal
 // do something with the hash value
 for(;k<s.length();++k) {
   rollinghash = ch.update(s.charAt(k-n), s.charAt(k));
