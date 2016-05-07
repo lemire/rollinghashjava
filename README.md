@@ -1,5 +1,4 @@
 ## Rolling hash functions in Java
-Daniel Lemire
 
 License: Apache 2.0
 
