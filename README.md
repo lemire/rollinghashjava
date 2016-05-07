@@ -18,7 +18,7 @@ String s = "some string";
 int n = 3; //hash all sequences of 3 characters
 CyclicHash ch = new CyclicHash(n);
 int k = 0;
-for(; k<n-1;++k) {
+for(; k<n;++k) {
   ch.eat(s.charAt(k));
 }
 int rollinghash = ch.eat(s.charAt(k)); // the first or last 32-(n-1) bits are 
